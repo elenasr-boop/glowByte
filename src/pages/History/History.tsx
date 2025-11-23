@@ -17,7 +17,7 @@ export function HistoryPage() {
   };
 
   useEffect(() => {
-    async function gettingAnalytics() {
+    async function gettingHistory() {
       try {
         const data = await getHistory(pileId!);
 
@@ -29,7 +29,7 @@ export function HistoryPage() {
       }
     }
 
-    gettingAnalytics();
+    gettingHistory();
   }, []);
 
   return (
