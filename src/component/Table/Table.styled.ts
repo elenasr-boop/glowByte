@@ -22,31 +22,30 @@ export const Th = styled.th`
   white-space: normal;
 `;
 
-export const Td = styled.td<{ level?: string }>`
+export const Td = styled.td<{ $level?: string }>`
   border: 1px solid #ccc;
   padding: 8px;
   overflow-wrap: break-word;
   white-space: normal;
 
-  /* Окраска уровней */
-  ${({ level }) =>
-    level === "low" &&
+  ${({ $level }) =>
+    $level === "low" &&
     `
       background-color: #d4f8d4;
       color: #0b6b0b;
       font-weight: bold;
     `}
 
-  ${({ level }) =>
-    level === "medium" &&
+  ${({ $level }) =>
+    $level === "medium" &&
     `
       background-color: #fff7cc;
       color: #b38a00;
       font-weight: bold;
     `}
 
-  ${({ level }) =>
-    level === "high" &&
+  ${({ $level }) =>
+    $level === "high" &&
     `
       background-color: #ffd6d6;
       color: #a30000;

@@ -37,3 +37,20 @@ export type ApiTableData = {
   last_temp: number;
   risk_forecast: ApiRiskForecast;
 };
+
+export type analyticsType = {
+  metrics: {
+    precision: number,
+    recall: number,
+    f1_score: number,
+    pr_auc: number
+  },
+  fire_events: [
+    {
+      pile_id: number,
+      actual_date: string,
+      predicted_interval: [string],
+      hit: boolean
+    }
+  ]
+}

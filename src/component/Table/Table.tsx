@@ -63,13 +63,13 @@ export function CoalTable() {
                   <Td>{row.days_in_storage}</Td>
                   <Td>{row.last_temp}</Td>
 
-                  <Td level={row.risk_forecast.day1}>
+                  <Td $level={row.risk_forecast.day1}>
                     {row.risk_forecast.day1}
                   </Td>
-                  <Td level={row.risk_forecast.day2}>
+                  <Td $level={row.risk_forecast.day2}>
                     {row.risk_forecast.day2}
                   </Td>
-                  <Td level={row.risk_forecast.day3}>
+                  <Td $level={row.risk_forecast.day3}>
                     {row.risk_forecast.day3}
                   </Td>
                 </TrClickable>

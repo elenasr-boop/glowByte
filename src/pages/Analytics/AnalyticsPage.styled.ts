@@ -25,10 +25,10 @@ export const Metrics = styled.div`
   gap: 8px;
 `;
 
-export const Metric = styled.div<{ success?: boolean }>`
+export const Metric = styled.div<{ $success?: boolean }>`
   font-size: 16px;
   font-weight: 600;
-  color: ${({ success }) => (success ? "#0b6b0b" : "#a30000")};
+  color: ${({ $success }) => ($success ? "#0b6b0b" : "#a30000")};
 `;
 
 export const TableWrapper = styled.div`
@@ -53,12 +53,12 @@ export const Th = styled.th`
   white-space: normal;
 `;
 
-export const Td = styled.td<{ success?: boolean }>`
+export const Td = styled.td<{ $success?: boolean }>`
   border: 1px solid #ccc;
   padding: 8px;
   overflow-wrap: break-word;
   white-space: normal;
-  color: ${({ success }) =>
-    success === undefined ? "#000" : success ? "#0b6b0b" : "#a30000"};
-  font-weight: ${({ success }) => (success !== undefined ? "bold" : "normal")};
+  color: ${({ $success }) =>
+    $success === undefined ? "#000" : $success ? "#0b6b0b" : "#a30000"};
+  font-weight: ${({ $success }) => ($success !== undefined ? "bold" : "normal")};
 `;
