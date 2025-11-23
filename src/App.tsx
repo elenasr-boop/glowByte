@@ -6,6 +6,7 @@ import { UploadsPage } from "./pages/Uploads/Uploads"
 import { HistoryPage } from "./pages/History/History"
 import { AnalyticsPage } from "./pages/Analytics/AnalyticsPage.tsx";
 import { Layout } from "./pages/Layout/Layout.tsx";
+import { ErrorPage } from "./pages/Error/Error.tsx";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/pile/:pileId/history" element={<HistoryPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
         </Route>
+        <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

@@ -48,3 +48,5 @@ export const FileName = styled.span`
   margin-left: 10px;
   font-style: italic;
 `;
+
+export const Message = styled.p``;

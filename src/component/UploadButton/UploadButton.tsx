@@ -1,15 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
-interface Props {
-  onOpenPopup: () => void;
-}
-
-export const UploadButton = ({ onOpenPopup }: Props) => {
+export const UploadButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/upload");
-    onOpenPopup();
   };
 
   return (
