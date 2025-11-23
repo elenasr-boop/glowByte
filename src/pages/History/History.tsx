@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import * as S from "./History.styled";
 import { useEffect, useRef, useState } from "react";
 import type { HistoryType } from "../../utils/types";
-import { getHistory } from "../../api/api";
+import { getHistory } from "../../api";
 import { Loading } from "../../component/Loading/Loading";
 import { downloadCSV } from "../../utils/utils";
 

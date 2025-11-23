@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as S from "./UploadForm.styled";
-import { uploadFile } from "../../api/api";
+import { uploadFile } from "../../api";
 
 type DataType = "temperature" | "fires" |"supplies" | "weather" | "";
 

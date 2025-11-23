@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Table, Th, Td, Tr, TrClickable, Wrapper } from "./Table.styled";
 import type { tableDataType } from "../../utils/types";
 import { useEffect, useState } from "react";
-import { getDashboard } from "../../api/api";
+import { getDashboard } from "../../api";
 import { Loading } from "../Loading/Loading";
 import { normalizeTableData } from "../../utils/utils";
 

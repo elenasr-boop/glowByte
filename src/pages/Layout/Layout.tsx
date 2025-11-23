@@ -2,7 +2,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Weather } from "../../component/Weather/Weather";
 import { UploadButton } from "../../component/UploadButton/UploadButton";
 import * as S from "./Layout.styled";
-import { getDashboard } from "../../api/api";
+import { getDashboard } from "../../api";
 import { Loading } from '../../component/Loading/Loading';
 import { useEffect, useState } from "react";
 import type { weatherType } from "../../utils/types";

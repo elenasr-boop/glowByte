@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { BackButton, ButtonsWrapper } from "../History/History.styled";
 import * as S from "./AnalyticsPage.styled";
 import { useEffect, useState } from "react";
-import { getAnalytics } from "../../api/api";
+import { getAnalytics } from "../../api";
 import { Loading } from "../../component/Loading/Loading";
 import type { analyticsType } from "../../utils/types";
 
