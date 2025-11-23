@@ -74,3 +74,8 @@ export type HistoryType = {
       probability: number;
     }[];
 };
+
+export type uploadProps = {
+  file: File;
+  dataType: string;
+};

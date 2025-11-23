@@ -47,7 +47,7 @@ export function Layout() {
           <Outlet />
 
           <S.Buttons>
-            <UploadButton onOpenPopup={() => console.log("popup open")} />
+            <UploadButton/>
             <Link to="/analytics">
               <button>Посмотреть аналитику</button>
             </Link>
