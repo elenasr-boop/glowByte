@@ -16,7 +16,6 @@ export function CoalTable() {
       try {
         const data = await getDashboard();
 
-        console.log(data.piles);
         if (data.piles === null) {
           return; 
         } else {

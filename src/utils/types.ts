@@ -54,3 +54,23 @@ export type analyticsType = {
     }
   ]
 }
+
+export type HistoryType = {
+  pile_id: number;
+  coal_type: string;
+  formation_date: string;
+  days_in_storage: number;
+  last_temp: number;
+  temperature_history: 
+    {
+      date: string;
+      temp: number;
+    }[]
+  ;
+  risk_history: 
+    {
+      date: string;
+      level: string;
+      probability: number;
+    }[];
+};

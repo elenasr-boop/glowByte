@@ -16,7 +16,6 @@ export function AnalyticsPage() {
       try {
         const data = await getAnalytics();
 
-        console.log(data);
         setAnalyticsData(data);
         setIsLoading(false);
       } catch (e: any) {

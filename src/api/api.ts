@@ -18,3 +18,13 @@ export async function getAnalytics () {
 
   return res.json();
 }
+
+export async function getHistory(id: string) {
+  const link = host + `/api/v1/pile/${id}/history`;
+
+  const res = await fetch(link, {
+    method: "GET",
+  });
+
+  return res.json();
+}

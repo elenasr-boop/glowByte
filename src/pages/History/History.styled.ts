@@ -22,9 +22,9 @@ export const TempSection = styled.div`
   font-weight: 600;
 `;
 
-export const RiskIndicator = styled.span<{ risk: string }>`
-  color: ${({ risk }) =>
-    risk === "low" ? "#0b6b0b" : risk === "medium" ? "#b38a00" : "#a30000"};
+export const RiskIndicator = styled.span<{ $risk: string }>`
+  color: ${({ $risk }) =>
+    $risk === "low" ? "#0b6b0b" : $risk === "medium" ? "#b38a00" : "#a30000"};
   font-weight: bold;
 `;
 
@@ -43,15 +43,15 @@ export const Th = styled.th`
   font-weight: bold;
 `;
 
-export const Td = styled.td<{ risk?: string }>`
+export const Td = styled.td<{ $risk?: string }>`
   border: 1px solid #ccc;
   padding: 8px;
-  ${({ risk }) =>
-    risk === "low"
+  ${({ $risk }) =>
+    $risk === "low"
       ? "color: #0b6b0b; font-weight: bold;"
-      : risk === "medium"
+      : $risk === "medium"
       ? "color: #b38a00; font-weight: bold;"
-      : risk === "high"
+      : $risk === "high"
       ? "color: #a30000; font-weight: bold;"
       : ""}
 `;
