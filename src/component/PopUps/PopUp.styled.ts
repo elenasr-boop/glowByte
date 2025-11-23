@@ -15,8 +15,8 @@ export const PopupOverlay = styled.div`
 `;
 
 export const PopupContainer = styled.div`
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 50%;
 
   background: white;
   border-radius: 16px;
