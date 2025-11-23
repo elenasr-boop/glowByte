@@ -9,8 +9,14 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
 `;
+export const TextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+`;
 
 export const Image = styled.img`
-    width: 33vw;
+    width: 27vw;
     height: auto;
 `;
