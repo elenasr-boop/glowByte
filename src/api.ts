@@ -1,4 +1,4 @@
-import type { uploadProps } from "../utils/types";
+import type { uploadProps } from "./utils/types";
 
 const host = "http://178.208.85.7:8000";
 
