@@ -1,19 +1,29 @@
 import { useNavigate, useParams } from "react-router-dom";
 import * as S from "./History.styled";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { HistoryType } from "../../utils/types";
 import { getHistory } from "../../api/api";
 import { Loading } from "../../component/Loading/Loading";
+import { downloadCSV } from "../../utils/utils";
 
 export function HistoryPage() {
   const navigate = useNavigate();
   const { pileId } = useParams();
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isDownloading, setIsDownloading] = useState<boolean>(false);
   const [historyData, setHistoryData] = useState<HistoryType | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const handleBack = () => navigate("/");
   const handleDownload = () => {
-    console.log("Скачиваем CSV...");
+    if (!historyData) return;
+    setIsDownloading(true);
+    downloadCSV(historyData);
+
+    timerRef.current = window.setTimeout(() => {
+      setIsDownloading(false);
+      timerRef.current = null;
+    }, 5000);
   };
 
   useEffect(() => {
@@ -30,6 +40,12 @@ export function HistoryPage() {
     }
 
     gettingHistory();
+
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -87,9 +103,16 @@ export function HistoryPage() {
 
           <S.ButtonsWrapper>
             <S.BackButton onClick={handleBack}>◄ Назад к дашборду</S.BackButton>
-            <S.DownloadButton onClick={handleDownload}>
-              📥 Скачать историю (CSV)
-            </S.DownloadButton>
+            {isDownloading ? (
+              <>Загрузка...</>
+            ) : (
+              <S.DownloadButton
+                onClick={handleDownload}
+                disabled={isDownloading ? true : false}
+              >
+                📥 Скачать историю (CSV)
+              </S.DownloadButton>
+            )}
           </S.ButtonsWrapper>
         </S.Container>
       )}
