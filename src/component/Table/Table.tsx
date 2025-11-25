@@ -20,6 +20,7 @@ export function CoalTable() {
           return; 
         } else {
           setTableData(normalizeTableData(data.piles));
+          console.log(data);
         };
         
         setIsLoading(false);
@@ -57,7 +58,7 @@ export function CoalTable() {
                   key={row.pile_id}
                   onClick={() => navigate(`/pile/${row.pile_id}/history`)}
                 >
-                  <Td>{row.coal_type}</Td>
+                  <Td>{row.pile_id}</Td>
                   <Td>{row.coal_type}</Td>
                   <Td>{row.days_in_storage}</Td>
                   <Td>{row.last_temp}</Td>

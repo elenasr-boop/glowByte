@@ -26,6 +26,7 @@ export function UploadForm() {
   }
 
   async function handleUpload() {
+    setMessage("Загружаю...");
     if (!file || !dataType) return;
 
     try {
